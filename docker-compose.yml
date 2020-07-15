@@ -1,0 +1,11 @@
+version: '2'
+services:
+  web:
+       build:
+               context: ./php/website
+               dockerfile: Dockerfile
+       container_name: php_app
+       volumes:
+          - ./php/website:/var/www/html/
+       ports:
+         - 8008:80
